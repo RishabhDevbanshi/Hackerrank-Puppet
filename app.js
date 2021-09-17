@@ -31,7 +31,7 @@ const code = readCode(path);
             headless: false,
             args: ['--start-maximized'],
             defaultViewport: null,
-            slowMo : 250
+            // slowMo : 250
         });
         const page = await browser.newPage();
         await page.goto(link);
