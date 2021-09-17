@@ -1,19 +1,8 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include <cstdio>
 using namespace std;
 
-int main()
-{
-    int n;
-    cin>>n;
-    int sum = 0;
-    for(int i=0;i<n;i++)
-    {
-        int x;
-        cin>>x;
-        sum += x;
-    }
-
-    cout<<sum;
-    
+int main() {
+    printf("Hello, World!");
     return 0;
 }
