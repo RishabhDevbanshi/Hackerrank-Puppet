@@ -2,25 +2,36 @@ const puppeteer = require('puppeteer');
 const readCode = require('./modules/readCode.js')
 const login = require('./modules/login');
 const runCode = require('./modules/runCode');
+const prompt = require('prompt-sync')({sigint : true});
 
+console.log('\nMake sure you already wrote your code in code.txt file \n\n');
+
+const name = prompt('Enter your Hackerrank profile username = ');
+const email = prompt('Enter your Hackerrank profile email = ');
+const pass = prompt('Enter your Hackerrank profile password = ');
+
+const url = prompt('Enter link of question to submit = ');
+
+console.log("\n\n");
 
 const user = {
-    name: "Beluga Chan",
-    email: "jedobo4736@stvbz.com",
-    password: "jedobo"
+    name : name,
+    email : email,
+    password : pass
 };
 
-const link = "https://www.hackerrank.com/challenges/simple-array-sum/problem";
+const link = url;
 
 const path = __dirname + '/code.txt'
 const code = readCode(path);
 
-const startPupper = (async () => {
+(async () => {
     try {
         const browser = await puppeteer.launch({
             headless: false,
             args: ['--start-maximized'],
-            defaultViewport: null
+            defaultViewport: null,
+            slowMo : 250
         });
         const page = await browser.newPage();
         await page.goto(link);
@@ -31,4 +42,4 @@ const startPupper = (async () => {
     } catch (err) {
         console.log(err);
     }
-});
+})();
