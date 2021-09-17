@@ -5,13 +5,13 @@ A puppet which **lets you automate the process of running and submitting your co
 
 Give Input using CMD :
 
-![Command Line Gif](public/CMD.gif)
+![Command Line Gif](gifs/CMD.gif)
 
 <hr></hr>
 
 Puppet takes care of rest :
 
-![Browser Gif](public/Browser.gif)
+![Browser Gif](gifs/Browser.gif)
 
 # Technologies Used
 
